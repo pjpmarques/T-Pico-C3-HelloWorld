@@ -16,18 +16,18 @@ void setup() {
   tft.setRotation(1);
   tft.fillScreen(TFT_BLACK);
   tft.setTextFont(7);
+  tft.setTextDatum(MC_DATUM);
   tft.setTextColor(TFT_WHITE, TFT_BLACK);
   digitalWrite(TFT_BACKLIGHT, HIGH);
 }
 
-void loop() {
-  static int count = 0;
+unsigned int count = 0;
 
+void loop() {
   Serial.println(count++);
   digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
 
-  tft.setCursor(0, 0);
-  tft.printf("%d", count);
+  tft.drawString(String(count), tft.width()/2, tft.height()/2);
 
   delay(1000);
 }
