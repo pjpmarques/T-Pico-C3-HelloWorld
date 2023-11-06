@@ -24,10 +24,10 @@ void setup() {
 unsigned int count = 0;
 
 void loop() {
-  Serial.println(count++);
+  Serial.println(count);
+  tft.drawString(String(count), tft.width()/2, tft.height()/2);
   digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
 
-  tft.drawString(String(count), tft.width()/2, tft.height()/2);
-
+  ++count;
   delay(1000);
 }
