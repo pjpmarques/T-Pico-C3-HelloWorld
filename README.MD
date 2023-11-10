@@ -4,6 +4,7 @@
 Project to bootstrap the use of [LilyGo T-Pico-C3](https://github.com/Xinyuan-LilyGO/T-PicoC3) with its TFT display.
 
 It presents a simple clock with minutes and seconds displayed, being implemented using hardware timers.
+It also uses the two buttons to change the colour of the text.
 
 For reference, here's the pinout of the board:
 
